@@ -4,6 +4,7 @@
 1. Django官方文档 https://docs.djangoproject.com/en/1.11/
 1. Django官方文档中译版 http://usyiyi.cn
 1. git参考 http://www.bootcss.com/p/git-guide/
+1. 大佬忘记这个项目了
 
 ## git合并规范
 

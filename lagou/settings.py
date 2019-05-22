@@ -108,7 +108,7 @@ IMAGES_URLS_FIELD='images_urls'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-USER_AGENT_LIST='/home/felix/scrapy/ua.txt'
+USER_AGENT_LIST='/home/felix/scrapy/lagou/lagou/ua.txt'
 SPLASH_URL = 'http://127.0.0.1:8050'
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'

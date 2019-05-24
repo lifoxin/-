@@ -2,7 +2,7 @@
 import scrapy
 from scrapy_splash import SplashRequest
 from lagou.items import ImageItem
-import json
+import json,re
 
 class LagouSpider(scrapy.Spider):
     name = 'lagou'
@@ -65,7 +65,8 @@ class JobSpider(scrapy.Spider): #爬取前程工作，保存数据到了mysql,�
             job = div.css('a::attr(title)').extract_first().strip()
             place = div.css('span.t3::text').extract_first().strip()
             company = div.css('span.t2 a::attr(title)').extract_first().strip()
-            money = div.css('span.t4::text').extract_first()
+            str = div.css('span.t4::text').extract_first()
+            money  = float(re.findall(r'(.*?)-.*?',str)[0])
             url=div.css('a::attr(href)').extract_first()
             item = dict(job=job, company=company, money=money, place=place)
             yield scrapy.Request(url, meta={'item': item}, callback=self.get_detail)

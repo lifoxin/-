@@ -130,3 +130,4 @@ HOST = 'localhost'
 #	money varchar(20),
 #	required varchar(10240)
 # )default charset uft8;
+# alter table 51job modify money float(5,2)
